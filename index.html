@@ -1,619 +1,228 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Theme Made By www.w3schools.com - No Copyright -->
-    <title>Home of Robert W. Hurra</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <style>
-        body {
-            font: 400 15px Lato, sans-serif;
-            line-height: 1.8;
-            color: #818181;
-        }
-        h2 {
-            font-size: 24px;
-            text-transform: uppercase;
-            color: #000000;
-            font-weight: 600;
-            margin-bottom: 30px;
-        }
-        h4 {
-            font-size: 19px;
-            line-height: 1.375em;
-            color: #303030;
-            font-weight: 400;
-            margin-bottom: 30px;
-        }
-        .jumbotron {
-            background-color: #000000;
-            color: #fff;
-            padding: 100px 25px;
-            font-family: Montserrat, sans-serif;
-        }
-        .container-fluid {
-            padding: 60px 50px;
-        }
-        .bg-grey {
-            background-color: #f6f6f6;
-        }
-        .logo-small {
-            color: #000000;
-            font-size: 50px;
-        }
-        .logo {
-            color: #000000;
-            font-size: 200px;
-        }
-        .thumbnail {
-            padding: 0 0 15px 0;
-            border: none;
-            border-radius: 0;
-        }
-            .thumbnail img {
-                width: 100%;
-                height: 100%;
-                margin-bottom: 10px;
-            }
-        .carousel-control.right, .carousel-control.left {
-            background-image: none;
-            color: #000000;
-        }
-        .carousel-indicators li {
-            border-color: #000000;
-        }
-            .carousel-indicators li.active {
-                background-color: #000000;
-            }
-        .item h4 {
-            font-size: 19px;
-            line-height: 1.375em;
-            font-weight: 400;
-            font-style: italic;
-            margin: 70px 0;
-        }
-        .item span {
-            font-style: normal;
-        }
-        .panel {
-            border: 1px solid #000000;
-            border-radius: 0 !important;
-            transition: box-shadow 0.5s;
-        }
-            .panel:hover {
-                box-shadow: 5px 0px 40px rgba(0,0,0, .2);
-            }
-        .panel-footer .btn:hover {
-            border: 1px solid #000000;
-            background-color: #fff !important;
-            color: #000000;
-        }
-        .panel-heading {
-            color: #fff !important;
-            background-color: #000000 !important;
-            padding: 25px;
-            border-bottom: 1px solid transparent;
-            border-top-left-radius: 0px;
-            border-top-right-radius: 0px;
-            border-bottom-left-radius: 0px;
-            border-bottom-right-radius: 0px;
-        }
-        .panel-footer {
-            background-color: white !important;
-        }
-            .panel-footer h3 {
-                font-size: 32px;
-            }
-            .panel-footer h4 {
-                color: #aaa;
-                font-size: 14px;
-            }
-            .panel-footer .btn {
-                margin: 15px 0;
-                background-color: #000000;
-                color: #fff;
-            }
-        .navbar {
-            margin-bottom: 0;
-            background-color: #000000;
-            z-index: 9999;
-            border: 0;
-            font-size: 12px !important;
-            line-height: 1.42857143 !important;
-            letter-spacing: 4px;
-            border-radius: 0;
-            font-family: Montserrat, sans-serif;
-        }
-            .navbar li a, .navbar .navbar-brand {
-                color: #818181 !important;
-            }
-        .navbar-nav li a:hover, .navbar-nav li.active a {
-            color: #000000 !important;
-            background-color: #fff !important;
-        }
-        .navbar-default .navbar-toggle {
-            border-color: transparent;
-            color: #fff !important;
-        }
-        .text-middle {
-            vertical-align: middle;
-        }
-        .horizontal-space {
-            padding: 25px;
-        }
-        footer .glyphicon {
-            font-size: 20px;
-            margin-bottom: 20px;
-            color: #000000;
-        }
-        .slideanim {
-            visibility: hidden;
-        }
-        .slide {
-            animation-name: slide;
-            -webkit-animation-name: slide;
-            animation-duration: 1s;
-            -webkit-animation-duration: 1s;
-            visibility: visible;
-        }
-        @keyframes slide {
-            0% {
-                opacity: 0;
-                transform: translateY(70%);
-            }
-            100% {
-                opacity: 1;
-                transform: translateY(0%);
-            }
-        }
-        @-webkit-keyframes slide {
-            0% {
-                opacity: 0;
-                -webkit-transform: translateY(70%);
-            }
-            100% {
-                opacity: 1;
-                -webkit-transform: translateY(0%);
-            }
-        }
-        @media screen and (max-width: 768px) {
-            .col-sm-4 {
-                text-align: center;
-                margin: 25px 0;
-            }
-            .btn-lg {
-                width: 100%;
-                margin-bottom: 35px;
-            }
-        }
-        @media screen and (max-width: 480px) {
-            .logo {
-                font-size: 150px;
-            }
-        }
-    </style>
-</head>
-<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#myPage">Top</a>
-            </div>
-            <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#education">EDUCATION</a></li>
-                    <li><a href="#employment">EMPLOYMENT</a></li>
-                    <li><a href="#services">INTERESTS</a></li>
-                    <li><a href="#portfolio">ENDORSEMENTS</a></li>
-                    <li><a href="#pricing">SKILLS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Clarence Taylor</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="" /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
                 </ul>
             </div>
-        </div>
-    </nav>
-
-    <!-- Container (Jumbotron Section) -->
-    <div class="jumbotron text-center">
-        <h1>hello,</h1>
-        <p>my name is robert.</p>
-    </div>
-
-    <!-- Container (About Section) -->
-    <div id="about" class="container-fluid">
-        <div class="row">
-            <div class="col-sm-8">
-                <h2>About Robert</h2><br>
-                <h4>I am 28 years old, born and raised in Solna. Growing up I spent most of my time in Vasalundshallen playing basketball. After graduating from Solna Gymnasium I started studying Microelectronics at KTH.</h4><br>
-                <p>I started studying Microelectronics because it was a combination of Electrical Engineering and Engineering Physics. This broadened my options when choosing master's degree. I chose Biomedical Physics becuase I wanted a career with great future prospects. However, I soon realized it wasn't quite my cup of tea because of all the biology. Therefore I researched for another master's degree, also with great future prospects, but more oriented towards math and phsysics. My decision was Optical Physics. I really enjoyed studying about optics and related areas.</p>
-                <p>After graduation I started to work at SolidEngineer as Technical Sales representive. This role was fun and I gained a lot of experience and met many great people. After this employment I started at my current job, that is Enterprise Modeler at aRway.</p>
-            </div>
-            <div class="col-sm-4">
-                <span class="glyphicon glyphicon-user logo"></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Container (Education Section) -->
-    <div id ="education" class="container-fluid bg-grey">
-        <div class="row">
-            <div class="col-sm-4">
-                <span class="glyphicon glyphicon-education logo slideanim"></span>
-            </div>
-            <div class="col-sm-8">
-                <h2>Academic education</h2><br>
-                <h4><strong>Master of Science, Engineering Physics:</strong> The track Optical physics is important in basic and applied research, as well as in industrial applications. The compulsory courses provided a sound knowledge of optics and laser physics, thereby providing a good foundation for many of the other courses. Many courses providde skills in practical problem solving, which prepared me for independent research and development work.</h4><br>
-                <p>
-                    <strong>Master thesis: Narrow Linewidth All-fiber Cavity Thulium Fiber Laser at 2 &micro;m</strong> The goal of the thesis was to develop a stable, narrow linewidth, all-fiber cavity thulium fiber laser with an output around 2 &micro;m. There are several important fields of applications for a narrow linewidth laser, including the area of optical sensors, spectroscopy and for optical fiber communication.
-                </p>
-                <p>
-                    The rare-earth element thulium has a broad gain-bandwidth allowing ultrashort pulse operation, and a wide wavelength tunability. Thulium has emission peaks located at eye-safe wavelengths, which open up applications within the field of medicine, spanning 400 nm, ranging from 1700 to 2100
-                    nm.
-                </p>
-                <p>
-                    <a href="http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-156642" title="View full thesis">Read the full thesis here.</a>
-                </p>
-                <br />
-                <h4><strong>Bachelor of Science, Microelectronics:</strong> The bachelor in Microelectronics gave me good knowledge in math and science including modelling, predict and evaluate events, mathematically, with a computer or experimentally.</h4><br>
-                <p>
-                    <strong>Bachelor thesis: Fabrication of Carbon Nanotube Doped Thin Films for Laser Applications</strong> The currently established technique for mode-locking with a semiconductor saturable absorber mirror is expensive and involves a fairly advanced production technique. Carbon nanotubes incorporated into thin plastic ﬁlms present an easy to produce and comparatively cheap alternative. These ﬁlms are produced by solving carbon nanotubes in a proper solvent, mixing with a host plastic material and ﬁnally spin coating to a substrate.
-                </p>
-                <p>
-                    <a href="http://urn.kb.se/resolve?urn=urn:nbn:se:kth:diva-103034" title="View full thesis">Read the full thesis here.</a>
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Container (Employment Section) -->
-    <div id="employment" class="container-fluid">
-        <div class="row">
-            <div class="col-sm-8">
-                <h2>Employment history</h2><br>
-                <h4><strong>Enterprise Modeler at aRway, Aug 2016 -</strong> My main tasks as an Enterprise Modeler is to model organizations processes, information flow and systems. I am aiming to be a Tool Expert within a year.</h4><br>
-                <p>
-                    <strong>Skills gained:</strong> Time management, ARIS, Sparx, QLM, scripting, configuration
-                </p>
-                <br />
-                <h4><strong>Summer internship at KTH, June - Aug 2016</strong> I helped the Laserphysics group with various lab work, e.g. manufacturing and measuring the effective refractive index of waveguides.</h4><br>
-                <p>
-                    <strong>Skills gained:</strong> 
-                </p>
-                <br />
-                <h4><strong>Substitute teacher at Vikariepoolen, Feb - June 2016</strong> I was a substitute teacher at Edsbergsskolan and was responsible for the math and science classes. This included planning lessons, correcting tests, grading the students and parental contact.</h4><br>
-                <p>
-                    <strong>Skills gained:</strong> Patience, leadership, pedagogy
-                </p>
-                <br />
-                <h4><strong>Sales Engineer at SolidEngineer, Sept 2014 - Aug 2015</strong> My task was to help companies improve their product development environment by choosing correct systems, including CAD, PDM and 3D-printers. I was responsible for the entire sales process, from cold-calling, finding business issues, handling quotations and follow up after purchase.</h4><br>
-                <p>
-                    <strong>Skills gained:</strong> Time management, sales, EQ, account management
-                </p>
-                <br />
-                <h4><strong>Summer internship at KTH, May - Sept 2014</strong> The laboratory tasks and instructions for undergraduates were updated and improved, both theoretically and practically.</h4><br>
-                <p>
-                    <strong>Skills gained:</strong> Knowledge of various electronic components and behaviour of sound waves
-                </p>
-            </div>
-            <div class="col-sm-4">
-                <span class="glyphicon glyphicon-briefcase logo slideanim" style="float:right"></span>
-            </div>
-        </div>
-    </div>
-
-    <!-- Container (Interests Section) -->
-    <div id="services" class="container-fluid  bg-grey text-center">
-        <h2>Interests</h2>
-        <h4>What I like to do</h4>
-        <br>
-        <div class="row slideanim">
-            <div class="col-sm-4">
-                <span class="glyphicon glyphicon-heart logo-small"></span>
-                <h4>Basketball</h4>
-                <p>I have played basketball since 1998. I had a lot of success as youth player with Solna Vikings and today I both play and coach in Blackeberg Basket.</p>
-            </div>
-            <div class="col-sm-4">
-                <span class="glyphicon glyphicon-headphones logo-small"></span>
-                <h4>Gaming</h4>
-                <p>I have always played a lot of PC games since a young age, including titles such as Age of Empires, The Sims, Starcraft, Counter-strike, Grand Theft Auto, Fallout, Rocket League etc. I also create my own content for various gaming channels on Youtube.</p>
-            </div>
-            <div class="col-sm-4">
-                <span class="glyphicon glyphicon-music logo-small"></span>
-                <h4>Music</h4>
-                <p>I love creating music. I started rather late but really enjoy it. Lately I haven't been as active as I want to be since I have a lot of time consuming hobbies. But I made a couple of songs and have also performed these live. I really should find the time to make more music!</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Container (Portfolio Section) -->
-    <div id="portfolio" class="container-fluid text-center">
-        <h2>Endorsements</h2><br>
-        <h4>My top endorsements on LinkedIn</h4>
-        <div class="row text-center slideanim">
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <img src="https://cdn.kastatic.org/KA-youtube-converted/7eutept5h0Q.mp4/7eutept5h0Q.png" alt="Physics" width="400" height="300">
-                    <p><strong>Physics</strong></p>
-                    <p>I have a master's degree in Engineering Physics.</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <img src="http://www.hotel-r.net/im/hotel/it/sales-7.jpg" alt="Sales" width="400" height="300">
-                    <p><strong>Sales</strong></p>
-                    <p>I was a sales engineer for one year.</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="thumbnail">
-                    <img src="http://blueturtle.co.za/wp-content/uploads/2014/10/privilege-account-management.jpg" alt="Account management" width="400" height="300">
-                    <p><strong>Account Management</strong></p>
-                    <p>The sales consisted mostly of additional sales.</p>
-                </div>
-            </div>
-        </div><br>
-
-        <h2>What my friends and colleagues say</h2>
-        <div id="myCarousel" class="carousel slide text-center" data-ride="carousel">
-            <!-- Indicators -->
-            <ol class="carousel-indicators">
-                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                <li data-target="#myCarousel" data-slide-to="1"></li>
-                <li data-target="#myCarousel" data-slide-to="2"></li>
-                <li data-target="#myCarousel" data-slide-to="3"></li>
-                <li data-target="#myCarousel" data-slide-to="4"></li>
-            </ol>
-
-            <!-- Wrapper for slides -->
-            <div class="carousel-inner" role="listbox">
-                <div class="item active">
-                    <h4>"Hard working and funny!"<br /><span style="font-style:normal;">Andreas Niia, lifelong friend</span></h4>
-                </div>
-                <div class="item">
-                    <h4>"Robert is driven by a desire to understand things, something that will help him in his career with us."<br /><span style="font-style:normal;">Sebastian Lindquist Rehn, Enterprise Architect, aRway</span></h4>
-                </div>
-                <div class="item">
-                    <h4>"Works very well, takes hold of new things and want to learn more, fun to work with!"<br /><span style="font-style:normal;">Marcus Bergenstråhle, Tool Expert, aRway</span></h4>
-                </div>
-                <div class="item">
-                    <h4>"Robert undertakes tasks from other colleagues and perform them with joy, even if they sometimes turn out to be a bit too challenging."<br /><span style="font-style:normal;">Carl Dahl Jareblom, Enterprise Modeler, aRway</span></h4>
-
-                </div>
-            </div>
-
-            <!-- Left and right controls -->
-            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
-            </a>
-        </div>
-    </div>
-
-    <!-- Container (Skills Section) -->
-    <div id="pricing" class="container-fluid  bg-grey">
-        <div class="text-center">
-            <h2>Skills</h2>
-            <h4>My skills and expertise</h4>
-        </div>
-        <div class="container-fluid text-center">
-            <div class="row slideanim">
-                <!-- Novice skills panel-->
-                <div class="col-sm-4 col-xs-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h1>Novice</h1>
-                        </div>
-                        <div class="panel-body">
-                            <!-- Images on left side-->
-                            <div class="col-sm-3 col-xs-3 text-right">
-                                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Flag_of_Serbia.svg/255px-Flag_of_Serbia.svg.png" alt="Flag of Serbia" height="30px" /></p>
-                                <p><img src="http://www.iitshubli.com/images/java.png" alt="Java logo" height="30px" /></p>
-                                <p><img src="http://www.itqlick.com/Graphics/Modules/Products/Logos/211.jpg" alt="ARIS logo" height="30px" /></p>
-                                <p><img src="http://rjdtechnology.co.uk/wp-content/uploads/2015/02/Sparx-EA-Logo.jpg" alt="Sparx logo" height="30px" /></p>
-                            </div>
-                            <!-- Description on right side-->
-                            <div class="col-sm-9 col-xs-9 text-left" style="vertical-align:middle;">
-                                <p style="height:30px;"><strong> Serbian</strong> CEFR Level A1</p>
-                                <p style="height:30px;"><strong> Java</strong> 1 year experience</p>
-                                <p style="height:30px;"><strong> ARIS</strong> <1 year experience</p>
-                                <p style="height:30px;"><strong> Sparx EA</strong> <1 year experience</p>
-                            </div>
-                        </div>
-                        <div class="panel-footer clearfix">
-                            <h3>Private</h3>
-                            <h4>experience</h4>
-                            <!-- Images on left side-->
-                            <div class="col-sm-3 col-xs-3 text-right">
-                                <p><img src="https://upload.wikimedia.org/wikipedia/en/c/c2/Adobe_Audition_CC_Logo.png" alt="Audition logo" height="30px" /></p>
-                            </div>
-                            <!-- Description on right side-->
-                            <div class="col-sm-9 col-xs-9 text-left" style="vertical-align:middle;">
-                                <p style="height:30px;"><strong> Audition</strong> 1 year experience</p>
-                            </div>
-                        </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Clarence
+                        <span class="text-primary">Taylor</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
+                        <a href="mailto:name@email.com">name@email.com</a>
+                    </div>
+                    <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="#"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" href="#"><i class="fab fa-facebook-f"></i></a>
                     </div>
                 </div>
-                <!-- Intermediate skills panel-->
-                <div class="col-sm-4 col-xs-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h1>Intermediate</h1>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Senior Web Developer</h3>
+                            <div class="subheading mb-3">Intelitec Solutions</div>
+                            <p>Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.</p>
                         </div>
-                        <div class="panel-body">
-                            <!-- Images on left side-->
-                            <div class="col-sm-3 col-xs-3 text-right">
-                                <p><img src="https://d1fl6fn6zyj2cc.cloudfront.net/wp-content/uploads/2014/08/sw-600x490.x77412.jpg" alt="SolidWorks logo" height="30px" /></p>
-                                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/Matlab_Logo.png/100px-Matlab_Logo.png" alt="Logo of MatLab" height="30px" /></p>
-                                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/dd/Microsoft_Office_2013_logo.svg/2000px-Microsoft_Office_2013_logo.svg.png" alt="Microsoft Office logo" height="30px" /></p>
-                            </div>
-                            <!-- Description on right side-->
-                            <div class="col-sm-9 col-xs-9 text-left" style="vertical-align:middle;">
-                                <p style="height:30px;"><strong> SolidWorks</strong> 1 year experience</p>
-                                <p style="height:30px;"><strong> Matlab</strong> 3 years experience</p>
-                                <p style="height:30px;"><strong> Office</strong> 3 years experience</p>
-                            </div>
+                        <div class="flex-shrink-0"><span class="text-primary">March 2013 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Web Developer</h3>
+                            <div class="subheading mb-3">Intelitec Solutions</div>
+                            <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.</p>
                         </div>
-                        <div class="panel-footer clearfix">
-                            <h3>Private</h3>
-                            <h4>experience</h4>
-                            <!-- Images on left side-->
-                            <div class="col-sm-3 col-xs-3 text-right">
-                                <p><img src="http://codecrew.co/wp-content/uploads/2014/05/html-css-logo.png" alt="HTML CSS logo" height="30px" /></p>
-                                <p><img src="https://lh5.ggpht.com/Qzc57KwDOZA2FN-BkAMrQDh8yrrr1RyXCXnCirpldwDpyBVf7AgW5jDpKq6qy1mhWy5p=w300" alt="FL Studio logo" height="30px" /></p>
-                                <p><img src="http://comweb.de/wp-content/uploads/logo/video/vegas-pro-logo-450x0487.png" alt="Sony Vegas logo" height="30px" /></p>
-                                <p><img src="https://upload.wikimedia.org/wikipedia/en/2/27/Adobe_After_Effects_CC_Logo.png" alt="After Effects logo" height="30px" /></p>
-                            </div>
-                            <!-- Description on right side-->
-                            <div class="col-sm-9 col-xs-9 text-left" style="vertical-align:middle;">
-                                <p style="height:30px;"><strong> HTML/CSS</strong> 2 years experience</p>
-                                <p style="height:30px;"><strong> FL Studio</strong> 2 years experience</p>
-                                <p style="height:30px;"><strong> Sony Vegas</strong> 1 year experience</p>
-                                <p style="height:30px;"><strong> After Effects</strong> 1 year experience</p>
-                            </div>
+                        <div class="flex-shrink-0"><span class="text-primary">December 2011 - March 2013</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Junior Web Designer</h3>
+                            <div class="subheading mb-3">Shout! Media Productions</div>
+                            <p>Podcasting operational change management inside of workflows to establish a framework. Taking seamless key performance indicators offline to maximise the long tail. Keeping your eye on the ball while performing a deep dive on the start-up mentality to derive convergence on cross-platform integration.</p>
                         </div>
+                        <div class="flex-shrink-0"><span class="text-primary">July 2010 - December 2011</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Web Design Intern</h3>
+                            <div class="subheading mb-3">Shout! Media Productions</div>
+                            <p>Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. Dramatically visualize customer directed convergence without revolutionary ROI.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">September 2008 - June 2010</span></div>
                     </div>
                 </div>
-                <!-- Advanced skills panel-->
-                <div class="col-sm-4 col-xs-12">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h1>Advanced</h1>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of Colorado Boulder</h3>
+                            <div class="subheading mb-3">Bachelor of Science</div>
+                            <div>Computer Science - Web Development Track</div>
+                            <p>GPA: 3.23</p>
                         </div>
-                        <div class="panel-body">
-                            <!-- Images on left side-->
-                            <div class="col-sm-3 col-xs-3 text-right">
-                                <p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4c/Flag_of_Sweden.svg/255px-Flag_of_Sweden.svg.png" alt="Flag of Sweden" height="30px" /></p>
-                                <p><img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/ae/Flag_of_the_United_Kingdom.svg/255px-Flag_of_the_United_Kingdom.svg.png" alt="Flag of UK" height="30px" /></p>
-                                <p><img src="http://i.stack.imgur.com/zHFFO.png" alt="LaTeX logo" height="30px" /></p>
-                            </div>
-                            <!-- Description on right side-->
-                            <div class="col-sm-9 col-xs-9 text-left" style="vertical-align:middle;">
-                                <p style="height:30px;"><strong> Swedish</strong> CEFR Level C2</p>
-                                <p style="height:30px;"><strong> English</strong> CEFR Level C2</p>
-                                <p style="height:30px;"><strong> LaTeX</strong> 3 years experience</p>
-                            </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2006 - May 2010</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">James Buchanan High School</h3>
+                            <div class="subheading mb-3">Technology Magnet Program</div>
+                            <p>GPA: 3.56</p>
                         </div>
-                        <div class="panel-footer clearfix">
-                            <h3>Private</h3>
-                            <h4>experience</h4>
-                            <!-- Images on left side-->
-                            <div class="col-sm-3 col-xs-3 text-right">
-                                <p><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Photoshop_CC_icon.png/65px-Photoshop_CC_icon.png" alt="Photoshop logo" height="30px" /></p>
-                            </div>
-                            <!-- Description on right side-->
-                            <div class="col-sm-9 col-xs-9 text-left">
-                                <p style="height:30px;"><strong> Photoshop</strong> 5+ years experience</p>
-                            </div>
-                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">August 2002 - May 2006</span></div>
                     </div>
                 </div>
-            </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-angular"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-gulp"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-grunt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-npm"></i></li>
+                    </ul>
+                    <div class="subheading mb-3">Workflow</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mobile-First, Responsive Design
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Browser Testing & Debugging
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Functional Teams
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Agile Development & Scrum
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. In the winter, I am an avid skier and novice ice climber. During the warmer months here in Colorado, I enjoy mountain biking, free climbing, and kayaking.</p>
+                    <p class="mb-0">When forced indoors, I follow a number of sci-fi and fantasy genre movies and television shows, I am an aspiring chef, and I spend a large amount of my free time exploring the latest technology advancements in the front-end web development world.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Google Analytics Certified Developer
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Mobile Web Specialist - Google Certification
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            1
+                            <sup>st</sup>
+                            Place - University of Colorado Boulder - Emerging Tech Competition 2009
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            1
+                            <sup>st</sup>
+                            Place - University of Colorado Boulder - Adobe Creative Jam 2008 (UI Design Category)
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            2
+                            <sup>nd</sup>
+                            Place - University of Colorado Boulder - Emerging Tech Competition 2008
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            1
+                            <sup>st</sup>
+                            Place - James Buchanan High School - Hackathon 2006
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            3
+                            <sup>rd</sup>
+                            Place - James Buchanan High School - Hackathon 2005
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
-    </div>
-
-        <!-- Container (Contact Section) -->
-        <div id="contact" class="container-fluid">
-            <h2 class="text-center">CONTACT</h2>
-
-                <div class="col-sm-6 slideanim">
-                    <p style="text-align:center;">Feel free to contact me for whatever reason.</p>
-                    <div style="float:left;">
-                        <div><p><span class="glyphicon glyphicon-phone logo-small" style="vertical-align: middle; margin-left:10px; margin-right:10px;"></span> +46 732175842</p></div>
-                        <div><p><span class="glyphicon glyphicon-envelope logo-small" style="vertical-align: middle; margin-left:10px; margin-right:10px;"></span> <img src="images/email.png" alt="my email" /></p></div>
-                        <div><p><span class="glyphicon glyphicon-map-marker logo-small" style="vertical-align: middle; margin-left:10px; margin-right:10px;"></span> Stockholm, Sweden</p></div>
-                    </div>
-                       
-                    </div>
-                <div class="col-sm-6 slideanim text-center">
-                    <p>Find me on social media.</p>
-                    <div class="container-fluid" style="display:flex;justify-content:space-between;">
-                        <div class="logo-small"><a href="https://se.linkedin.com/in/rwhurra"><span class="fa fa-linkedin"></span></a></div>
-                        <div class="logo-small"><a href="https://facebook.com/robbas"><span class="fa fa-facebook"></span></a></div>
-                        <div class="logo-small"><a href="https://www.youtube.com/channel/UC-qYStRJV1sLlUNyIUit_2g"><span class="fa fa-youtube"></span></a></div>
-                        <div class="logo-small"><a href="https://twitter.com/RWHurra"><span class="fa fa-twitter"></span></a></div>
-                        <div class="logo-small"><a href="https://github.com/RWHurra"><span class="fa fa-github"></span></a></div>
-                    </div>
-                </div>
-
-        </div>
-
-        <div id="googleMap" style="height:400px;width:100%;"></div>
-
-        <!-- Add Google Maps -->
-        <script src="http://maps.googleapis.com/maps/api/js"></script>
-        <script>
-            var myCenter = new google.maps.LatLng(59.355006, 17.883022);
-            function initialize() {
-                var mapProp = {
-                    center: myCenter,
-                    zoom: 13,
-                    scrollwheel: false,
-                    draggable: false,
-                    mapTypeId: google.maps.MapTypeId.ROADMAP
-                };
-                var map = new google.maps.Map(document.getElementById("googleMap"), mapProp);
-                var marker = new google.maps.Marker({
-                    position: myCenter,
-                });
-                marker.setMap(map);
-            }
-            google.maps.event.addDomListener(window, 'load', initialize);
-        </script>
-
-        <footer class="container-fluid text-center">
-            <a href="#myPage" title="To Top">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-            </a>
-            <p>Thank you too <a href="http://www.w3schools.com" title="Visit w3schools">www.w3schools.com</a> for great tutorials!</p>
-        </footer>
-
-        <script>
-            $(document).ready(function () {
-                // Add smooth scrolling to all links in navbar + footer link
-                $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
-                    // Make sure this.hash has a value before overriding default behavior
-                    if (this.hash !== "") {
-                        // Prevent default anchor click behavior
-                        event.preventDefault();
-                        // Store hash
-                        var hash = this.hash;
-                        // Using jQuery's animate() method to add smooth page scroll
-                        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
-                        $('html, body').animate({
-                            scrollTop: $(hash).offset().top
-                        }, 900, function () {
-                            // Add hash (#) to URL when done scrolling (default click behavior)
-                            window.location.hash = hash;
-                        });
-                    } // End if
-                });
-                $(window).scroll(function () {
-                    $(".slideanim").each(function () {
-                        var pos = $(this).offset().top;
-                        var winTop = $(window).scrollTop();
-                        if (pos < winTop + 600) {
-                            $(this).addClass("slide");
-                        }
-                    });
-                });
-            })
-        </script>
-
-</body>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Third party plugin JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
