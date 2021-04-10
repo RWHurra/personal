@@ -85,7 +85,7 @@ body {
   }
 
   .timeline > li > .timeline-panel {
-      background: var(--gray-dark);
+      background: var(--dark);
   }
 
   .subheading {
@@ -98,4 +98,7 @@ body {
 
   li {
       color: var(--light);
+      }
+      img {
+          filter: grayscale(80%);
       }
