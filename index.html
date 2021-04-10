@@ -16,14 +16,10 @@
     <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
     <!-- Core theme CSS (includes Bootstrap)-->
     <link href="css/styles.css" rel="stylesheet" />
-    <!-- Timeline CSS from WC3 Schools, slightly modified
-    <link href="css/timeline.css" rel="stylesheet" />-->
-    <!-- Horizontal timeline CSS from StackOverflow, slightly modified
-    <link href="css/horizontal-timeline.css" rel="stylesheet" />-->
     <!-- Timeline CSS from Bootsnipp, slightly modified-->
-    <link href="css/timeline-test.css" rel="stylesheet" />
-    <!-- Dark-mode-->
-    <link href="css/dark-mode.css" rel="stylesheet" />
+    <link href="css/timeline.css" rel="stylesheet" />
+    <!-- Dark-mode from blog.shhdharmen.me, slightly modified-->
+    <link id="dark-theme-style" rel="stylesheet" />
 </head>
 
 <body id="page-top">
@@ -46,6 +42,9 @@
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Intressen</a></li>
                 <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Kurser och certifieringar</a>
                 </li>
+                <li class="nav-item mt-2"> <a href="javascript:void()"
+                        class="btn btn-outline-light btn-lg ml-auto font-weight-bold" id="theme-toggler"
+                        onclick="toggleTheme()"></a></li>
             </ul>
         </div>
     </nav>
@@ -60,7 +59,7 @@
                 </h1>
                 <div class="subheading mb-5">
                     Solna · Sweden · 0732175842 ·
-                    <a href="mailto:robbas@gmail.com">robbas@gmail.com</a>
+                    <a href="mailto:robbas@gmail.com">robbas [snabel-a] gmail [punkt] com</a>
                 </div>
                 <p class="lead mb-5">Certifierad kravingenjör som arbetar med verksamhetsarkitektur. Jag hjälper
                     organisationer med förändring genom att skapa en brygga mellan IT och verksamhet.</p>
@@ -262,141 +261,6 @@
                         </div>
                     </li>
                 </ul>
-
-                <!-- Experience: timeline-->
-                <!-- <h2 class="mb-5">Utvald tidslinje</h2>
-                <div class="bar mb-5"></div>
-                <div class="timeline">
-                    <div class="entry">
-                        <h1>2016</h1>
-                        <h2>aRway</h2>
-                        <span class="d-flex justify-content-center"><img src="assets/img/arway.png"
-                                height="64px" /></span>
-                        <p>Min resa inom arkitektur började här.</p>
-                    </div>
-                    <div class="entry">
-                        <h1>2018</h1>
-                        <h2>C3K</h2>
-                        <span class="d-flex justify-content-center"><img src="assets/img/c3.png" height="64px" /></span>
-                        <p>Jag fördjupade inom UAF.</p>
-                    </div>
-                    <div class="entry">
-                        <h1>2021</h1>
-                        <h2>RDS</h2>
-                        <span class="d-flex justify-content-center"><img src="assets/img/rejlers.png"
-                                height="64px" /></span>
-                        <p>Nutid.</p>
-                    </div>
-                </div>
-
-                <div class="mb-5"></div> -->
-
-                <!-- Experience: list-->
-                <!-- <h2 class="mb-5">Full erfarenhet</h2>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">EA-konsult</h3>
-                        <div class="subheading mb-3"><img src="assets/img/rejlers.png" height="32px"> Rejlers Defence
-                            and Security</div>
-                        <p>C3K blev förvärvade av RDS och jag arbetar inom samma projekt som hos C3K. Se nedan.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Januari 2021 - </span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">EA-konsult</h3>
-                        <div class="subheading mb-3"><img src="assets/img/c3.png" height="32px"> C3 Konsult</div>
-                        <p>Jag var en del av ett större förändringsprojekt inom Försvarsmakten via FMV. I detta projekt
-                            lärde jag mig att arbeta enligt <b>NAF</b> och <b>UAF</b>. Arbetet involverade den vänstra
-                            delen av
-                            utvecklings-V:t, från initiala behov, visioner, mål och intressenter, till teknisk lösning
-                            och hur denna tekniska lösning påverkar den nuvarande verksamheten i form av ändrade
-                            metoder/processer samt organisatorisk uppbyggnad. Det var även mycket fokus på krav-delen,
-                            vilket motiverade min certifiering som kravingenjör.</p>
-                        <p>Under hela projektets gång användes verktyget <b>Sparx EA</b>, främst för att få en tydlig
-                            spårbarhet och för att generera dokument. Fokuset med modelleringen var alltid att skapa
-                            nytta för kunden genom att generera lämpliga dokument, diagram och grafer från modellen för
-                            att öka förståelsen för projektet och lösningen som projektet resulterade i.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Januari 2018 - Januari 2021</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Verksamhetskonsult</h3>
-                        <div class="subheading mb-3"><img src="assets/img/arway.png" height="32px"> aRway</div>
-                        <p>Min resa inom verksamhetsarkitektur, enterprise architecture, började här. Jag blev
-                            introducerad och insatt i ramverket <b>Archimate</b> samt olika verktyg. Framförallt
-                            verktyget
-                            <b>Sparx EA</b>, som blev mitt primära arbetsredskap. Jag hjälpte verksamheter med deras
-                            arkitekturmiljöer, främst konfigurering och dokumentgenerering
-                            men även workshops och modellering. Min roll hos verksamheterna var oftast ansvarig för
-                            deras EA-funktion, vilket innebar att stötta projekt med modellrelaterade frågor och
-                            utbildning, samt att utveckla modelleringsmiljön.
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Augusti 2016 - December 2017</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Sommar-forskare</h3>
-                        <div class="subheading mb-3"><img src="assets/img/kth.png" height="32px"> Kungliga Tekniska
-                            Högskolan</div>
-                        <p>Jag utförde laborationsarbete, bland annat att tillverka och mäta effective refractive index
-                            av waveguides.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Juni 2016 - Augusti 2016</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Ma/NO-lärare</h3>
-                        <div class="subheading mb-3"><img src="assets/img/sollentuna.png" height="32px"> Edsbergsskolan
-                        </div>
-                        <p>Jag var under en termin vikarierande lärare för årskurs sju på Edsbergsskolan i Sollentuna.
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Februari 2016 - Juni 2016</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Försäljningsingenjör</h3>
-                        <div class="subheading mb-3"><img src="assets/img/solid-engineer.png" height="32px"> Solid
-                            Engineer</div>
-                        <p>Jag hjälpte kunder med att utveckla sina CAD-miljöer med verktyg ur Dassault Systems
-                            portfölj.
-                        </p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">September 2014 - Augusti 2015</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Sommarjobbare</h3>
-                        <div class="subheading mb-3"><img src="assets/img/kth.png" height="32px"> Kungliga Tekniska
-                            Högskolan</div>
-                        <p>Jag uppdaterade dokumentation kring diverse laborationsuppgifter. Instruktioner för både
-                            handledare samt deltagare och tillhörande uppgifter.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Maj 2014 - September 2014</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Utvecklare</h3>
-                        <div class="subheading mb-3"><img src="assets/img/mathleaks.png" height="32px"> MathLeaks</div>
-                        <p>Jag uppdaterade dokumentation kring diverse laborationsuppgifter. Instruktioner för både
-                            handledare samt deltagare och tillhörande uppgifter.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">Augusti 2012 - Augusti 2013</span></div>
-                </div>
-                <div class="d-flex flex-column flex-md-row justify-content-between">
-                    <div class="flex-grow-1">
-                        <h3 class="mb-0">Matematik/fysik-stöd</h3>
-                        <div class="subheading mb-3"><img src="assets/img/solna.png" height="32px"> Solna Gymnasium
-                        </div>
-                        <p>Jag hade matematik- och fysik-stöd en gång i veckan, samt vikarierade som lärare vid behov på
-                            Solna Gymnasium. Det var här jag själv gick i gymnasiet, natur natur med inriktning
-                            elitidrott, basket.</p>
-                    </div>
-                    <div class="flex-shrink-0"><span class="text-primary">December 2011 - Juni 2012</span></div>
-                </div> -->
             </div>
         </section>
         <hr class="m-0" />
@@ -534,6 +398,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+    <!-- Toogle dark-mode JS from blog.shhdharmen.me-->
+    <script src="js/index.js"></script>
 </body>
 
 </html>
