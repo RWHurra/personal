@@ -95,6 +95,13 @@ body {
   .bg-primary {
       background-color: var(--dark) !important;
   }
+  .bg-light {
+      background-color: var(--black) !important;
+  }
+
+  hr {
+      border-top: 1px solid white;
+  }
 
   li {
       color: var(--light);
